@@ -7,6 +7,8 @@ Task Requirements for Build Up Functions in Biological Data Analysis
 Function for translating DNA to protein
 
 Function for stimulation and generation of bacterial population growth curve & Generate 100 growth curves In this case, the logistic growth curve equation is
+
+
 ![image](https://github.com/user-attachments/assets/4d28781b-2de7-4895-98d2-0380960ec28f)
 
 
