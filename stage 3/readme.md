@@ -71,13 +71,48 @@ Given the sensitivity of depression detection, we prioritize:
 ✅ AUC-ROC Score (to measure model discrimination ability)
 ✅ F1-Score (to balance precision & recall)
 
-#### 🔍 Evaluation Results:
+## **Evaluation Metrics**  
+Given the **sensitivity of depression detection**, we prioritize:  
 
-Model	Precision	Recall	F1-Score	AUC-ROC
-Logistic Regression	XX%	XX%	XX%	XX%
-Random Forest	XX%	XX%	XX%	XX%
-XGBoost	XX%	XX%	XX%	XX%
-📌 Next Steps: Address any class imbalance if recall is too low.
+✅ **Recall** (to reduce false negatives – missing depressed students)  
+✅ **AUC-ROC Score** (to measure model discrimination ability)  
+✅ **F1-Score** (to balance precision & recall)  
+
+### **Model Performance Comparison**  
+
+| Model                 | Precision | Recall | F1-Score | AUC-ROC |
+|----------------------|------------|--------|----------|---------|
+| **Logistic Regression** | 0.86 | 0.88 | 0.87 | 0.835 |
+| **Random Forest**       | 0.85 | 0.88 | 0.86 | 0.831 |
+| **XGBoost**            | 0.85 | 0.87 | 0.86 | 0.825 |
+| **Tuned Random Forest** | 0.85 | 0.89 | 0.87 | 0.829 |
+
+📌 **Key Takeaways:**  
+- The **Tuned Random Forest** has the **highest recall (0.89)**, making it the best model for detecting depression cases.  
+- **Logistic Regression and Random Forest** perform similarly, with **Logistic Regression having the highest AUC-ROC (0.835)**.  
+- **XGBoost performs well but slightly underperforms compared to other models.**  
+
+---
+
+### **Feature Importance (Random Forest)**  
+
+| Rank | Feature | Importance Score |
+|------|-------------------------------------|----------------|
+| 1️⃣  | Have you ever had suicidal thoughts? | **0.210** |
+| 2️⃣  | Academic Pressure                    | **0.171** |
+| 3️⃣  | CGPA                                 | **0.103** |
+| 4️⃣  | Financial Stress                     | **0.102** |
+| 5️⃣  | Age                                  | **0.095** |
+| 6️⃣  | Work/Study Hours                     | **0.081** |
+| 7️⃣  | Degree                               | **0.073** |
+| 8️⃣  | Study Satisfaction                   | **0.048** |
+| 9️⃣  | Sleep Duration                       | **0.039** |
+| 🔟  | Dietary Habits                        | **0.038** |
+
+📌 **Insights from Feature Importance:**  
+- **Suicidal Thoughts** is the most critical feature, indicating a strong link to depression.  
+- **Academic Pressure & Financial Stress** play a significant role in students' mental health.  
+- **Sleep Duration & Dietary Habits** also contribute but have less impact than stress-related factors.  
 
 ## Results
 📊 Feature Importance Analysis (Random Forest):
@@ -87,11 +122,10 @@ XGBoost	XX%	XX%	XX%	XX%
 4️⃣ Suicidal Thoughts – Strongest indicator
 5️⃣ Family History of Mental Illness – Increases risk factor
 
-## 🔍 Key Insights:
-
-Work and financial stress strongly influence depression.
-Sleep duration and dietary habits also play a role.
-Certain features like CGPA may not be as important.
+📌 **Insights from Feature Importance:**  
+- **Suicidal Thoughts** is the most critical feature, indicating a strong link to depression.  
+- **Academic Pressure & Financial Stress** play a significant role in students' mental health.  
+- **Sleep Duration & Dietary Habits** also contribute but have less impact than stress-related factors.  
 
 ### Ethical Considerations
 
